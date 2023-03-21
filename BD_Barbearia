@@ -23,6 +23,7 @@ CREATE TABLE Barbeiro
 	SENHA		VARCHAR(50)NOT NULL,
 	EMAIL	    VARCHAR(100)NULL,
 	dataNasc    date NULL,
+	nivelAcesso VARCHAR(10)NOT NULL,
 	FOTO		VARBINARY(max) NULL,
 
 	-- PRIMARY KEY: chave primária
@@ -52,7 +53,7 @@ GO
 	DESCRICAO    VARCHAR(50) NULL,
 	TEMPO        VARCHAR(30) NOT NULL,
 	PRECO        DECIMAL(8,2) NOT NULL,
-	STATUS       INT NOT NULL,
+	STATUS       BIT NOT NULL,
 	
 	-- PRIMARY KEY: chave primária
 	PRIMARY KEY (ID)
@@ -102,6 +103,44 @@ CREATE TABLE Agendamento
 )
 GO
 
+CREATE TABLE Tempo_Agendamento_30
+(
+     ID			    	INT IDENTITY,
+	 DATA_AGENDAMENTO	DATE NOT NULL,
+	 HORA_AGENDAMENTO	TIME NOT NULL,
+	 STATUS			    INT NOT NULL,
+	 SERVICO_ID		    INT NOT NULL,
+	 CLIENTE_ID	     	INT NOT NULL,
+	 BARBEIRO_ID    	INT NOT NULL,
+	 AGENDAMENTO_ID     INT NOT NULL,
+	 
+	 PRIMARY KEY (ID),
+	 FOREIGN KEY (SERVICO_ID) REFERENCES Servico(ID),
+	 FOREIGN KEY (CLIENTE_ID) REFERENCES Cliente(ID),
+	 FOREIGN KEY (BARBEIRO_ID) REFERENCES Barbeiro(ID),
+	 FOREIGN KEY (AGENDAMENTO_ID) REFERENCES Agendamento(ID)
+)
+GO
+
+CREATE TABLE Tempo_Agendamento_60
+(
+     ID			    	INT IDENTITY,
+	 DATA_AGENDAMENTO	DATE NOT NULL,
+	 HORA_AGENDAMENTO	TIME NOT NULL,
+	 STATUS			    INT NOT NULL,
+	 SERVICO_ID		    INT NOT NULL,
+	 CLIENTE_ID	     	INT NOT NULL,
+	 BARBEIRO_ID    	INT NOT NULL,
+	 AGENDAMENTO_ID     INT NOT NULL,
+	 
+	 PRIMARY KEY (ID),
+	 FOREIGN KEY (SERVICO_ID) REFERENCES Servico(ID),
+	 FOREIGN KEY (CLIENTE_ID) REFERENCES Cliente(ID),
+	 FOREIGN KEY (BARBEIRO_ID) REFERENCES Barbeiro(ID),
+	 FOREIGN KEY (AGENDAMENTO_ID) REFERENCES Agendamento(ID)
+)
+GO
+
 CREATE TABLE Forma_Pagamento
 (
 	ID INT IDENTITY,
@@ -139,22 +178,16 @@ CREATE TABLE Checkin
 )
 GO
 
-INSERT INTO Servico VALUES ('Corte','Corte na Máquina','30min','20','')
+INSERT INTO Servico VALUES ('Corte','Corte na Máquina','30min','25','')
 GO
-INSERT INTO Servico VALUES ('Corte Navalhado','Corte na Navalha','50min','25','')
+INSERT INTO Servico VALUES ('Barba','Barba na Navalha','15min','15','')
 GO
-INSERT INTO Servico VALUES ('Barba','Barba na Navalha','10min','20','')
-GO
-INSERT INTO Servico VALUES ('Somente Pezinho','Máquina e Navalha','15min','10','')
-GO
-INSERT INTO Servico VALUES ('Sobracelha','Navalha','5min','5','')
+INSERT INTO Servico VALUES ('Sobrancelha','Sobrancelha na Navalha','10min','5','')
 GO
 
-INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','barbeiro01','DONKiNG@BARBEARIA.COM.BR',NULL,NULL)
+INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','barbeiro01','DONKiNG@BARBEARIA.COM.BR',NULL,'empregado',NULL)
 GO
-INSERT INTO Barbeiro VALUES('Nogueira','152036985','barbeiro02','BarbeariaDK@barbeiro.com.br',NULL,NULL)
-GO
-INSERT INTO Barbeiro VALUES('Kaiky','152754985','barbeiro03','BarbeariaDK@hotmail.com',NULL,NULL)
+INSERT INTO Barbeiro VALUES('Kaiky','152754985','barbeiro03','BarbeariaDK@hotmail.com',NULL,'adm',NULL)
 GO
 
 INSERT INTO Cliente VALUES ('Jhonata','1121784596','jhow123','jhow_cli@gmail.com',NULL,NULL)
