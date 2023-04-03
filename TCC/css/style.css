@@ -3,8 +3,15 @@
   
 } */
 
+.expander .content {
+    display: none;
+  }
+  .expander.expanded .content {
+    display: block;
+  }
+  
 #nav{
-    margin-left: 250px;
+    margin-left: 360px;
     height: 56px;
     background-color: #121212;
 }
@@ -32,7 +39,6 @@ body {
     font-size: 180%;
     font-weight: bold;
     padding: 2px;
-    
 }
 
 .sidebar {
@@ -41,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 250px;
+    width: 360px;
     height: 100%;
     padding: 40px 10px 30px 10px;
     border-right: 1px solid #2f3336;
@@ -57,12 +63,20 @@ body {
 }
 
 .logo-img {
-    width: 42px;
+    width: 80px;
     min-height: 42px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.5s;
     margin-left: 12px;
+}
+.expander{
+    padding: 10px;
+}
+
+.setaAgendamento{
+    width: 26px;
+    background-color: #121212;
 }
 
 .logo-img:hover {
@@ -249,9 +263,3 @@ td.num{
 tr.numPausa{
     color: red;
 }
-
-
-/* .header {
-    background-color: #121212;
-    
-} */

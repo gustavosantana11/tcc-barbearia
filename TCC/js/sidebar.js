@@ -6,3 +6,9 @@ function toggleMenu(){
         menuMobile.className = "menu-mobile-active"
     }
 }
+
+function expand() {
+    var expander = document.querySelector('.expander');
+    expander.classList.toggle('expanded');
+  }
+  

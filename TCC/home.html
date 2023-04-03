@@ -24,22 +24,53 @@
 
     <nav class="sidebar">
         <header class="sidebar-header">
-            <img class="logo-img" src="imagens/Barbeiro_Aquiles.jpg" alt="Foto do Barbeiro" />
+            <img class="logo-img" src="https://github.com/gustavosantana11/tcc-barbearia/blob/main/TCC/imagens/Barbeiro_Aquiles.jpg?raw=true" alt="Foto do Barbeiro" />
         </header>
         <nav>
-            <button>
-                <span>
-                    <i class="material-symbols-outlined"> email </i>
-                    <span>Agendamento</span>
-                </span>
-            </button>
 
-            <button>
-                <span>
-                    <i class="material-symbols-outlined"> person </i>
-                    <span>Progresso</span>
-                </span>
-            </button>
+            <div class="expander">
+                <button onclick="expand()">Agendamento<img class="setaAgendamento" src="images/seta.png" alt=""></button>
+                <div class="container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <span class="month-picker" id="month-picker"> Abril </span>
+                            <div class="year-picker" id="year-picker">
+                                <span class="year-change" id="pre-year">
+                                    <pre><</pre>
+                                </span>
+                                <span id="year">2023</span>
+                                <span class="year-change" id="next-year">
+                                    <pre>></pre>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-body">
+                            <div class="calendar-week-days">
+                                <div>Dom</div>
+                                <div>Seg</div>
+                                <div>Ter</div>
+                                <div>Qua</div>
+                                <div>Qui</div>
+                                <div>Sex</div>
+                                <div>Sab</div>
+                            </div>
+                            <div class="calendar-days">
+
+                            </div>
+                        </div>
+                        <div class="calendar-footer">
+
+                        </div>
+                        <div class="date-time-formate">
+                            <div class="day-text-formate">TODAY</div>
+                        </div>
+                    </div>
+                  
+                </div>
+              </div>
+              
+
         </nav>
 
     </nav>
@@ -62,13 +93,6 @@
             <span>
                 <i class="material-symbols-outlined"> email </i>
                 <span class="mobile-text">Agendamento</span>
-            </span>
-        </button>
-
-        <button>
-            <span>
-                <i class="material-symbols-outlined"> person </i>
-                <span class="mobile-text">Progresso</span>
             </span>
         </button>
 
