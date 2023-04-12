@@ -71,7 +71,7 @@ GO
 
 CREATE TABLE Contato_Barbeiro
 (
- ID          INT IDENTITY,
+ ID          INT IDENTITY (10,1),
  CONTATO     VARCHAR (50) NOT NULL,
  TIPO_CONTADO VARCHAR (50) NOT NULL,
  BARBEIRO_ID INT NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE Forma_Pagamento
 )
 GO
 
-CREATE TABLE Pagamento_Barbearia
+CREATE TABLE Pagamento
 (
   ID				 INT IDENTITY,
   FORMA_PAGAMENTO_ID INT not null,
@@ -147,16 +147,16 @@ GO
 INSERT INTO Servico VALUES ('Sobrancelha','Sobrancelha na Navalha','10min','5','')
 GO
 
-INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','barbeiro01','DONKiNG@BARBEARIA.COM.BR',NULL,'empregado',NULL)
+INSERT INTO Barbeiro VALUES ('Aquiles','11-21326196','barbeiro01','DONKiNG@BARBEARIA.COM.BR',NULL,'empregado',NULL)
 GO
-INSERT INTO Barbeiro VALUES('Kaiky','152754985','barbeiro03','BarbeariaDK@hotmail.com',NULL,'adm',NULL)
+INSERT INTO Barbeiro VALUES('Kaiky','15-2754985','barbeiro03','BarbeariaDK@hotmail.com',NULL,'adm',NULL)
 GO
 
-INSERT INTO Cliente VALUES ('Jhonata','1121784596','jhow123','jhow_cli@gmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES ('Jhonata','11-21784596','jhow123','jhow_cli@gmail.com',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Gustavo','152036784','guxta','guxta_cli@hotmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES('Gustavo','15-2036784','guxta','guxta_cli@hotmail.com',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Guilherme','115254985','gui123','guilher_cli@gmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES('Guilherme','11-5254985','gui123','guilher_cli@gmail.com',NULL,NULL)
 GO
 
 INSERT INTO Forma_Pagamento VALUES('DINHEIRO')
@@ -166,7 +166,17 @@ GO
 INSERT INTO Forma_Pagamento VALUES('PIX')
 GO
 
+INSERT INTO Contato_Barbeiro VALUES ('11-21326196','TELEFONE','1')
+GO
+INSERT INTO Contato_Barbeiro VALUES ('15-2754985','TELEFONE','2')
+GO
 
+INSERT INTO Contato_Cliente VALUES ('11-21784596','TELEFONE','10')
+GO
+INSERT INTO Contato_Cliente VALUES('15-2036784','TELEFONE','11')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5254985','TELEFONE','12')
+GO
 
 SELECT * FROM Servico
 SELECT * FROM Barbeiro
