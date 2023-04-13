@@ -5,7 +5,7 @@ if (localStorage.getItem("token") == null) {
 
 const userLogado = JSON.parse(localStorage.getItem("userLogado"));
 
-if (userLogado.nivelAcesso != "admin") {
+if (userLogado.nivelAcesso != "1") {
   alert("Você não tem permissão para acessar essa página");
   window.location.href = "../html/index.html";
 }
