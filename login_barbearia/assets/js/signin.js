@@ -60,12 +60,38 @@ function entrar(){
 }
 
 function verificarNivelAcesso(nivelAcesso) {
+  if (localStorage.getItem("token") == null) {
+    alert("Você precisa estar logado para acessar essa página");
+    window.location.href = "../html/signin.html";
+    return;
+  }
+
+  const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+
   switch(nivelAcesso) {
-    case 'admin':
-      window.location.href = 'admin.html';
+    case '1':
+      if (userLogado.nivelAcesso != "1") {
+        window.location.href = "";
+        return;
+      }
       break;
-    case 'user':
-      window.location.href = 'user.html';
+    case '2':
+      if (userLogado.nivelAcesso != "2") {
+        window.location.href = "";
+        return;
+      }
+      break;
+    default:
+      alert('Nível de acesso inválido');
+      return;
+  }
+
+  switch(nivelAcesso) {
+    case '1':
+      window.location.href = 'adimin.html';
+      break;
+    case '2':
+      window.location.href = 'mster.html';
       break;
     default:
       alert('Nível de acesso inválido');
