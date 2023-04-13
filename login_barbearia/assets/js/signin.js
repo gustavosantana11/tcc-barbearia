@@ -88,10 +88,10 @@ function verificarNivelAcesso(nivelAcesso) {
 
   switch(nivelAcesso) {
     case '1':
-      window.location.href = 'adimin.html';
+      window.location.href = 'admin.html';
       break;
     case '2':
-      window.location.href = 'mster.html';
+      window.location.href = 'master.html';
       break;
     default:
       alert('Nível de acesso inválido');
