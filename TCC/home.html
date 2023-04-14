@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/dycalendar.css" >
+
+    <link rel="stylesheet" href="css/style.css" >
 
     <title>Don King</title>
 </head>
@@ -20,60 +30,47 @@
           <p> <span class="label1">DON</span> <br/>
             <span class="label2">KING</span> </p>
         </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img class="sino" src="imagens/sino.png" alt="sino">
+          </button>
+          <div class="dropdown-content">
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+            <a href="#">_______________</a>
+          </div>
+          <div class="rectangle"></div>
+        </div>
       </nav> 
 
     <nav class="sidebar">
         <header class="sidebar-header">
-            <img class="logo-img" src="https://github.com/gustavosantana11/tcc-barbearia/blob/main/TCC/imagens/Barbeiro_Aquiles.jpg?raw=true" alt="Foto do Barbeiro" />
+            <img class="logo-img" src="imagens/barbeiroAquiles.jpg" alt="Foto do Barbeiro" />
         </header>
-        <nav>
-
-            <div class="expander">
-                <button onclick="expand()">Agendamento<img class="setaAgendamento" src="images/seta.png" alt=""></button>
-                <div class="container">
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <span class="month-picker" id="month-picker"> Abril </span>
-                            <div class="year-picker" id="year-picker">
-                                <span class="year-change" id="pre-year">
-                                    <pre><</pre>
-                                </span>
-                                <span id="year">2023</span>
-                                <span class="year-change" id="next-year">
-                                    <pre>></pre>
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="calendar-body">
-                            <div class="calendar-week-days">
-                                <div>Dom</div>
-                                <div>Seg</div>
-                                <div>Ter</div>
-                                <div>Qua</div>
-                                <div>Qui</div>
-                                <div>Sex</div>
-                                <div>Sab</div>
-                            </div>
-                            <div class="calendar-days">
-
-                            </div>
-                        </div>
-                        <div class="calendar-footer">
-
-                        </div>
-                        <div class="date-time-formate">
-                            <div class="day-text-formate">TODAY</div>
+        <!-- Botão de Transição Agendamento com o Calendário -->
+        <ul>
+            <li><a href="#" class="agendamento">AGENDAMENTO</a>
+                <ul class="itemAgendamento"></ul> <li></li>
+                        <div class="container">
+                        <div id="dycalendar">
                         </div>
                     </div>
-                  
-                </div>
-              </div>
-              
+            </li>
 
-        </nav>
+            <!-- Botão Desconectar -->
 
+            <button id="desconectar">DESCONECTAR</button>
+
+            <img class="porta" src="imagens/porta.png" alt="porta">
+
+        </ul>
     </nav>
+
+    <script type="text/javascript" src="js/home.js"></script>
+
+    <script src="js/dycalendar.js"></script>
 
     <!-- Menu para Mobile-->
 
@@ -98,22 +95,207 @@
 
     </nav>
 
+    <script src="js/home.js"></script>
+
+    <script src="js/dycalendar.js"></script>
+
     <div class="main">
-        <!-- <div class="header">
-            <p> <span class="label1">DON</span> <br />
-                <span class="label2">KING</span>
-            </p>
-        </div> -->
+       
+          <!-- Button trigger modal -->
+    <button onclick="mostrar_modalAgendamento()" type="button" class="btn btn-primary" id="adicionar-agendamento"
+      data-bs-toggle="modal">
+      NOVO AGENDAMENTO
+    </button>
+
+    <img class="add" src="imagens/add.png" alt="adicionar">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_novoAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_agendamento">
+              <p> <span class="title-modal" id="title-modal1">CADASTRAR AGENDAMENTO</span> <br />
+                <span class="title-modal-underline"> INFORMAÇÕES DO CLIENTE </span>
+              </p>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="servico" class="form-label">SERVIÇO (S)</label>
+              <input type="text" class="form-control" id="servico">
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">TELEFONE</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+            <div class="mb-3">
+              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
+              <input type="text" class="form-control" id="pagamento">
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opcional)</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="button-criar">CRIAR AGENDAMENTO</button>
+          </div>
+        </div>
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalEditar()" type="button" class="btn btn-primary" id="editar-agendamento"
+      data-bs-toggle="modal">
+      EDITAR AGENDAMENTO
+    </button>
+
+    <img class="lapis" src="imagens/lapis.png" alt="lapis">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_editarAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="title-modal2">EDITAR AGENDAMENTO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="servico" class="form-label">SERVIÇO (S)</label>
+              <input type="text" class="form-control" id="servico">
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">TELEFONE</label>
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+            <div class="mb-3">
+              <label for="pagamento" class="form-label">FORMA DE PAGAMENTO</label>
+              <input type="text" class="form-control" id="pagamento">
+            </div>
+            <div class="mb-3">
+              <label for="observacao" class="form-label">OBSERVAÇÃO (opcional)</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="button-editar">EDITAR AGENDAMENTO</button>
+          </div>
+        </div>
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalExcluir()" type="button" class="btn btn-primary" id="excluir-agendamento"
+      data-bs-toggle="modal">
+      EXCLUIR AGENDAMENTO
+    </button>
+
+    <img class="lixeira" src="imagens/lixeira.png" alt="lixeira">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_excluirAgendamento" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="title-modal3"> EXCLUIR AGENDAMENTO </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">NOME</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+
+            <div class="mb-3">
+              <label for="observacao" class="form-label">JUSTIFICATIVA</label>
+              <input type="text" class="form-control" id="observacao">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="button-excluir"> EXCLUIR AGENDAMENTO</button>
+          </div>
+        </div>
+      </div>
+    </div><br> <!-- Usei o <br> mas tira e faz a quebra pelo css arrumar as posiçoes dos botao modal-->
+
+    <button onclick="mostrar_modalDisponibilidade()" type="button" class="btn btn-primary"
+      id="adicionar-disponibilidade">
+      CADASTRAR AUSÊNCIA
+    </button>
+
+    <img class="bloqueio" src="imagens/bloqueio.png" alt="bloqueio">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_addDisponibilidade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content" style="color: black;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="label_disponibilidade">
+              <p> <span class="title-modal" id="title-modal4">CADASTRAR AUSÊNCIA</span> <br />
+                <span id="nome-profissional"> PROFISSIONAL </span>
+              </p>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">PROFISSIONAL</label>
+              <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="mb-3">
+              <label for="horario" class="form-label">HORÁRIO</label>
+              <input type="time" class="form-control" id="horario">
+            </div>
+            <div class="mb-3">
+              <label for="justificativa" class="form-label">JUSTIFICATIVA</label>
+              <input type="text" class="form-control" id="justificativa">
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="button-ausencia">CONFIRMAR AUSÊNCIA</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
         <div class="tabela">
             <table>
                 <thead>
                     <tr>
                         <th>
-                            <img src="" alt="">
-                            Horário
+                            <img class="relogio" src="imagens/relogio.png" alt="relogio">
+                            
                         </th>
-                        <th>Clientes Agendados</th>
+                        <th class="clientes">Clientes Agendados</th>
                         <th class="checkin"> CHECK - IN </th>
 
                     </tr>
@@ -121,14 +303,20 @@
                 <tbody>
                     <tr>
                         <td class="num">09:00</td>
-                        <td> OSCAR </td>
-                        <td>5</td>
+                        <td class="nome"> GUSTAVO </td>
+                        <td>
+                    <button id="botao-correto"><img class="correto" src="imagens/correto.png" alt="correto"></button>
+                    <button id="botao-xzinho"><img class="xzinho" src="imagens/xzinho.png" alt="xzinho"></button>
+                        </td>
 
                     </tr>
                     <tr>
                         <td class="num">10:00</td>
-                        <td>MARCOS</td>
-                        <td>8</td>
+                        <td class="nome"> LUCAS </td>
+                        <td>
+                    <button id="botao-correto"><img class="correto" src="imagens/correto.png" alt="correto"></button>
+                    <button id="botao-xzinho"><img class="xzinho" src="imagens/xzinho.png" alt="xzinho"></button>
+                        </td>
                     </tr>
                     <tr>
                         <td class="num">11:00</td>
@@ -190,7 +378,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
-    <script src="js/sidebar.js"></script>
+
+    <script src="js/home.js"></script>
+
+    <!-- Script de Import do Calendário -->
+
+    <script src="js/dycalendar.js"></script>
+    <script>
+        dycalendar.draw({
+          target: '#dycalendar',
+          type: 'month',
+          dayformat: 'full',
+          monthformat: 'full',
+          highlighttargetdate: true,
+          prevnextbutton: 'show'
+        })
+    </script>
+
 </body>
 
 </html>
