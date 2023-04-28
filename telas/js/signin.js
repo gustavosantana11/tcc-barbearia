@@ -1,3 +1,39 @@
+// Classe Autenticacao
+class Autenticacao {
+    static usuarios = [
+      new Usuario('aquilesbarbeiro', '12345', 1),
+      new Usuario('kaikyadm', '54321', 2)
+    ];
+  
+    static autenticarUsuario(nome, senha) {
+      for (let i = 0; i < this.usuarios.length; i++) {
+        const usuario = this.usuarios[i];
+        if (usuario.nome === nome && usuario.senha === senha) {
+          return usuario;
+        }
+      }
+      return null;
+    }
+  }
+
+// Event listener para o botão de login
+document.querySelector('#btnLogin').addEventListener('click', () => {
+    const nome = document.querySelector('#txtUsuario').value;
+    const senha = document.querySelector('#txtSenha').value;
+  
+    const usuario = Autenticacao.autenticarUsuario(nome, senha);
+  
+    if (usuario != null) {
+      if (usuario.nivelAcesso === 1) {
+        // Redirecionar para a tela de ADM
+      } else if (usuario.nivelAcesso === 2) {
+        // Redirecionar para a tela de MASTER
+      }
+    } else {
+      alert('Usuário ou senha inválidos');
+    }
+  });
+
 let btn = document.querySelector('.fa-eye');
 
 btn.addEventListener('click', ()=>{
