@@ -11,14 +11,22 @@ body{
     width: 100%;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(90deg, #000000, #141631);
+    background: #000;
 }
+
+#nomeCadastro{
+    margin-top: -20px;
+    margin-left: 64px;
+}
+
 #form{
+    height: 640px;
     position: relative;
-    top: 50%;
+    margin-top: 10px;
+    top: 320px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
     padding: 60px;
     width: min-content;
@@ -37,7 +45,7 @@ body{
 .input i{
     font-size: 1.2em;
     padding: 5px;
-    background: -webkit-linear-gradient(-45deg, #06679b, #353a88, #840808);
+    background: -webkit-linear-gradient(-45deg, #2d4595, #840808);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -57,16 +65,15 @@ body{
 }
 #btn button{
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #06679b, #353a88, #840808);
+    background: #2d4595;
     width: 100%;
     height: 40px;
     border: none;
     font-size: 1.2em;
-    color: #fff;
     border-radius: 200px;
     outline: none;
     cursor: pointer;
 }
 #btn button:hover{
-    background: linear-gradient(-45deg, #022f47, #060d6e, #610404);
+    background: #990202;
 }
