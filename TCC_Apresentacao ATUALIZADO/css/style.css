@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* *{
+    box-sizing: border-box;
+  
+} */
+
+#nav{
+    margin-left: 324px;
+    height: 56px;
+    background-color: #000;
+}
+
+body {
+    font-family: sans-serif;
+    color: #FFF;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.label1 {
+    color: red;
+    line-height: 0.3em;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.label2 {
+    color: #2d4595;
+    line-height: 0.1em;
+    font-size: 180%;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 324px;
+    height: 100%;
+    padding: 40px 5px 5px 5px;
+    border-right: 1px solid #2f3336;
+    background-color: #000;
+    transition: 0.4s;
+    
+}
+
+.sidebar-header {
+    width: 100%;
+    margin-bottom: 16px;
+
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    line-height: 80px;
+}
+
+.sidebar ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 1s;
+    display: block;
+}
+
+.sidebar ul li a:hover{
+    background-color: #2d4595;
+    margin-right: -6px;
+    margin-left: -35px;
+    transition: 0.5s;
+}
+
+.sidebar ul ul{
+    display: none;
+}
+
+.sidebar ul .itemAgendamento.mostra{
+    display: block;
+}
+
+.sidebar ul li a span{
+    font-size: 28px;
+    transition: 0.4s;
+}
+
+.sidebar ul li a span.girar{
+    transform: rotate(90deg);
+}
+
+.logo-img {
+    width: 55px;
+    min-height: 40px;
+    position: relative;
+    margin-bottom: 10;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    margin-left: 30px;
+}
+
+.logo-img:hover {
+    transform: scale(2.0);
+}
+
+#desconectar{
+    position: fixed;
+    top: 618px;
+    padding-left: 7px;
+    width: 100px;
+    height: 28px;
+    margin-left: 25px;
+    margin-bottom: 24px;
+    background-color: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.porta{
+    width: 25px;
+    position: fixed;
+    top: 620px;
+    margin-bottom: 1px;
+}
+
+.agendamento{
+    margin-left: 59px;
+    position: relative;
+    top: 2px;
+}
+
+#adicionar-agendamento{
+    position: fixed;
+    top: 85px;
+    padding-left: 24px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #2d4595;
+    color: #fff;
+    border-color: #2d4595;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#editar-agendamento{
+    position: fixed;
+    top: 130px;
+    padding-left: 28px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #00804b;
+    color: #fff;
+    border-color: #00804b;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#excluir-agendamento{
+    position: fixed;
+    top: 175px;
+    padding-left: 33px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#adicionar-disponibilidade{
+    position: fixed;
+    top: 220px;
+    padding-left: 30px;
+    width: 180px;
+    height: 32px;
+    margin-left: 15px;
+    background-color: #444;
+    color: #fff;
+    border-color: #444;
+    border-radius: 1px;
+    font-size: 11px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.add{
+    width: 21px;
+    margin-left: 24px;
+    position: fixed;
+    top: 90px;
+}
+
+.lapis{
+    width: 15px;
+    margin-left: 28px;
+    position: fixed;
+    top: 138px;
+}
+
+.lixeira{
+    width: 16px;
+    margin-left: 26px;
+    position: fixed;
+    top: 182px;
+}
+
+
+.bloqueio{
+    width: 16px;
+    margin-left: 27px;
+    position: fixed;
+    top: 228px;
+}
+
+.tabela{
+    margin-top: -65px;
+    margin-left: -55px;
+}
+
+.clientes{
+    width: 300px;
+}
+
+.checkin{
+    width: 120px;
+}
+
+#botao-correto{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    margin-right: 10px;
+    background-color: #00804b;
+    border-color: #00804b;
+}
+
+.correto{
+    width: 14px;
+}
+
+#botao-xzinho{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.xzinho{
+    width: 14px;
+}
+
+.relogio{
+    width: 18px;
+    left: 646px;
+    position: fixed;
+    top: 76px;
+}
+
+#title-modal1{
+    margin-left: 96px;
+}
+
+#title-modal2{
+    margin-left: 114px;
+    color:#00804b;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+#title-modal3{
+    margin-left: 108px;
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+#title-modal4{
+    margin-left: 116px;
+}
+
+.title-modal-underline{
+    margin-left: 99px;
+    color: #2d4595;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+#nome-profissional{
+    margin-left: 158px;
+    color:#111;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+#button-criar{
+    background-color: #2d4595;
+    border-color: #2d4595;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#button-editar{
+    background-color: #00804b;
+    border-color: #00804b;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#button-excluir{
+    background-color: #ff0000;
+    border-color: #ff0000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#button-ausencia{
+    background-color: #444;
+    border-color: #444;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container-fluid{
+    margin-top: 6px;
+}
+
+/* INÍCIO CALENDÁRIO */
+
+.container{
+    position: relative;
+    width: 270px;
+    height: 330px;
+    left: 20px;
+    background: #2f3336;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dycalendar{
+    width: 100%;
+    padding: 1px;
+}
+
+#dycalendar table{
+    width: 100%;
+    margin-left: 1px;
+    margin-top: 40px;
+    border-spacing: 5px;
+}
+
+#dycalendar table tr:nth-child(1) td{
+    background: #2d4595;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+#dycalendar table td{
+    color: #fff;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#dycalendar table td:hover{
+    background: #2d4595;
+    color: #fff;
+}
+
+.dycalendar-month-container .dycalendar-today-date, .dycalendar-month-container .dycalendar-target-date{
+    background: #2d4595;
+    color: #111;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
+    background: #2d4595;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+    top: 1px;
+    left: 4px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn{
+    background: #2d4595;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+    top: 1px;
+    right: 4px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* FIM CALENDÁRIO */
+
+.sidebar button {
+    height: 60px;
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: 0.5s;
+}
+
+.sidebar button:hover>span {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.sidebar icon i {
+    position: relative;
+    font-size: 30px;
+    transition: 0.2s;
+}
+
+.sidebar button span {
+    font-size: 16px;
+
+}
+
+.sidebar>nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main {
+    margin-left: 326px; /* 250px era qual estav aqui porem como aumento a sidebar tava cobrindo faz teste com o 250 se conseguir puxar so os elementos coloca o 250px de volta*/
+    margin-right: 6px;
+    overflow: hidden;
+
+}
+
+
+/* Ajustar a SideBar com somente os ícones */
+@media (width < 920px) {
+    .sidebar {
+        width: 82px;
+    }
+
+    .sidebar button>span {
+        width: 50px;
+    }
+
+    .sidebar button>span>span {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+    .main {
+        transition: margin 0.6s;
+        margin-left: 78px;
+
+    }
+    #nav{
+        transition: margin 0.6s;
+        margin-left: 78px;
+
+    }
+}
+
+/* Ajustar Menu para Mobile */
+
+.button-mobile {
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: #FFF;
+    border: 0;
+}
+
+.button-mobile span {
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.button-close span i {
+    font-size: 42px;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.menu-mobile-active {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-mobile-active button {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    margin-bottom: 16px;
+}
+
+.menu-mobile-active button>span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.mobile-text {
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+@media (max-widht: 480px) {
+    .sidebar {
+        display: none;
+    }
+
+    .button-mobile {
+        display: flex;
+    }
+
+    .main {
+        margin-left: 6px;
+    }
+    #nav{
+        margin-left: 6px;
+    }
+}
+
+
+table {
+    border: 1px;
+    border-collapse: collapse;
+    margin-left: 350px;
+    color: #000;
+}
+
+th,td {
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+
+thead tr {
+    border-bottom: solid 3px #444;
+}
+
+tbody tr:hover {
+    background-color: #8f8a8a;
+}
+td.num{
+    color: blue;
+    font-style: normal;
+}
+tr.numPausa{
+    color: red;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+td.nome{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dropdown{
+    bottom: 64px;
+    margin-left: 780px;
+    display: inline-block;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+  
+.dropdown-content a{
+    background-color:#2f3336;
+    color: #2f3336;
+    padding: 32px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.sino{
+    position: absolute;
+    top: 10px;
+    width: 34px;
+    right: 190px;
+}
+
+#cadastrarCliente{
+    position: fixed;
+    top: 85px;
+    padding-left: 12px;
+    width: 180px;
+    height: 40px;
+    margin-left: 15px;
+    background-color: #2d4595;
+    color: #fff;
+    border-color: #2d4595;
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#tableClient{
+    margin-left: 280px;
+}
