@@ -12,7 +12,7 @@ GO
 
 CREATE TABLE Barbeiro
 (
-	 -- IDENTITY: campo auto numÈrico
+	 -- IDENTITY: campo auto num√©rico
 	ID INT IDENTITY,
 	NOME        VARCHAR(100) NOT NULL,
 	TELEFONE	VARCHAR(11)NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Barbeiro
 	nivelAcesso VARCHAR(10)NOT NULL,
 	FOTO		VARBINARY(max) NULL,
 
-	-- PRIMARY KEY: chave prim·ria
+	-- PRIMARY KEY: chave prim√°ria
 	PRIMARY KEY(ID)
 )
 GO
@@ -43,7 +43,7 @@ GO
 
  CREATE TABLE Servico
 (
-    -- IDENTITY: campo auto numÈrico
+    -- IDENTITY: campo auto num√©rico
 	ID           INT IDENTITY,
 	NOME_SERVICO VARCHAR(50) NOT NULL,
 	DESCRICAO    VARCHAR(50) NULL,
@@ -51,7 +51,7 @@ GO
 	PRECO        DECIMAL(8,2) NOT NULL,
 	STATUS       BIT NOT NULL,
 	
-	-- PRIMARY KEY: chave prim·ria
+	-- PRIMARY KEY: chave prim√°ria
 	PRIMARY KEY (ID)
 )
 GO
@@ -154,41 +154,96 @@ CREATE TABLE Checkin
 )
 GO
 
-INSERT INTO Servico VALUES ('Corte','Corte na M·quina e Navalha','30min','25','')
+INSERT INTO Servico VALUES ('Corte','Corte na M√°quina e Navalha','30min','25','')
 GO
-INSERT INTO Servico VALUES ('Barba','Barba na M·quina e Navalha','15min','15','')
+INSERT INTO Servico VALUES ('Barba','Barba na M√°quina e Navalha','15min','15','')
 GO
 INSERT INTO Servico VALUES ('Sobrancelha','Sobrancelha na Navalha','10min','5','')
 GO
 
-INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','12345','donking01@gmail.com',NULL,'Barbeiro',NULL)
+INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','donking01@gmail.com','12345','05/06/2005','Barbeiro',NULL)
 GO
-INSERT INTO Barbeiro VALUES('Kaiky','152754985','54321','donking02@gmail.com',NULL,'ADM',NULL)
+INSERT INTO Barbeiro VALUES('Kaiky','152754985','donking02@gmail.com','54321',NULL,'ADM',NULL)
 GO
 
-INSERT INTO Cliente VALUES ('Jhonata','1121784596','jhow123','jhow_cli@gmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES ('Jhonata dos Santos','1121784596','jhow_cli@gmail.com','jhow_123','01/05/2005',NULL)
 GO
-INSERT INTO Cliente VALUES('Gustavo','152036784','guxta','guxta_cli@hotmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES('Gustavo dos Santos','152036784','guxta_cli@hotmail.com','guxta_123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Guilherme','115254985','gui123','guilher_cli@gmail.com',NULL,NULL)
+INSERT INTO Cliente VALUES('Guilherme Rosendo','115254985','guilherme_cli@gmail.com','gui_123','08/03/2004',NULL)
 GO
+INSERT INTO Cliente VALUES('Gabriel Felisdoro','115254942','gabriel@hotmail.com','gab123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Pedro Almeida','115254961','pedrao123@gmail.com','pdr123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Vinicius Moises','115254984','vinimoises@hotmail.com','vini321','25/06/2001',NULL)
+GO
+INSERT INTO Cliente VALUES('Rafael Pinto','115254965','rafaelpinto@gmail.com','rpinto123','24/07/1988',NULL)
+GO
+INSERT INTO Cliente VALUES('Cristiano Ronaldo','115454985','cr7@hotmail.com','ccr7rei',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Marcio Silva','115654557','marciosilva@gmail.com','marcio321','30/04/1999',NULL)
+GO
+INSERT INTO Cliente VALUES('Ordinael Zurc','143254984','ordinaelzurc@hotmail.com','ordi123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Marcos Santos','119843566','marcossantos@hotmail.com','marcao123','14/03/2003',NULL)
+GO
+INSERT INTO Cliente VALUES('Fernando Jose','114546465','fjose@hotmail.com','fernando123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Malaquias Junior','119843234','malaquiasjunior@gmail.com','malaquias123','17/09/1978',NULL)
+GO
+INSERT INTO Cliente VALUES('Bruno Costa','119843437','bruninho@hotmail.com','bruno123','12/01/2000',NULL)
+GO
+INSERT INTO Cliente VALUES('Jose Alves','1198435435','josealves@gmail.com','jose123',NULL,NULL)
+GO
+
 
 INSERT INTO Forma_Pagamento VALUES('DINHEIRO')
 GO
-INSERT INTO Forma_Pagamento VALUES('CART√O')
+INSERT INTO Forma_Pagamento VALUES('CART√ÉO')
 GO
 INSERT INTO Forma_Pagamento VALUES('PIX')
 GO
 
 INSERT INTO Contato_Barbeiro VALUES('11-21326196', 'TELEFONE', '1')
 GO
-INSERT INTO Contato_Barbeiro VALUES('15-2754985', 'TELEFONE', '2')
+INSERT INTO Contato_Barbeiro VALUES('15-2036784', 'TELEFONE', '2')
 GO
+
+
 
 INSERT INTO Contato_Cliente VALUES('11-812345677', 'TELEFONE', '10')
 GO
 INSERT INTO Contato_Cliente VALUES('15-27549856', 'TELEFONE', '11')
 GO
+INSERT INTO Contato_Cliente VALUES('11-5254985', 'TELEFONE', '12')
+GO
+
+INSERT INTO Contato_Cliente VALUES('11-5254985', 'TELEFONE', '13')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5254942', 'TELEFONE', '14')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5254961', 'TELEFONE', '15')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5254984', 'TELEFONE', '16')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5254965', 'TELEFONE', '17')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5454985', 'TELEFONE', '18')
+GO
+INSERT INTO Contato_Cliente VALUES('11-5654557', 'TELEFONE', '19')
+GO
+INSERT INTO Contato_Cliente VALUES('14-3254984', 'TELEFONE', '20')
+GO
+INSERT INTO Contato_Cliente VALUES('11-9843566', 'TELEFONE', '21')
+GO
+INSERT INTO Contato_Cliente VALUES('11-4546465', 'TELEFONE', '22')
+GO
+INSERT INTO Contato_Cliente VALUES('11-9843234', 'TELEFONE', '23')
+GO
+INSERT INTO Contato_Cliente VALUES('11-9843437', 'TELEFONE', '24')
+GO
+
 
 
 INSERT INTO Agendamento VALUES (10, 1, GETDATE(), '10:45', 0, '00:30:00', 1)
@@ -204,7 +259,6 @@ INSERT INTO Pagamento_Barbearia VALUES (2, 2, 11, 15)
 GO
 INSERT INTO Pagamento_Barbearia VALUES (1, 3, 12, 5)
 GO
-
 
 
 SELECT * FROM Servico
