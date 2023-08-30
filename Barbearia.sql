@@ -161,40 +161,111 @@ GO
 INSERT INTO Servico VALUES ('Sobrancelha','Sobrancelha na Navalha','10min','5','')
 GO
 
-INSERT INTO Barbeiro VALUES ('Aquiles','1121326196','donking01@gmail.com','12345','05/06/2005','Barbeiro',NULL)
+INSERT INTO Barbeiro VALUES ('Aquiles','11927523144','donking01@gmail.com','12345','05/06/2005','Barbeiro',NULL)
 GO
-INSERT INTO Barbeiro VALUES('Kaiky','152754985','donking02@gmail.com','54321',NULL,'ADM',NULL)
+INSERT INTO Barbeiro VALUES('Kaiky','11921784596','donking02@gmail.com','54321',NULL,'ADM',NULL)
 GO
 
-INSERT INTO Cliente VALUES ('Jhonata dos Santos','1121784596','jhow_cli@gmail.com','jhow_123','01/05/2005',NULL)
+
+INSERT INTO Cliente VALUES ('Jhonata dos Santos','11921946670','jhow_cli@gmail.com','jhow_123','01/05/2005',NULL)
 GO
-INSERT INTO Cliente VALUES('Gustavo dos Santos','152036784','guxta_cli@hotmail.com','guxta_123',NULL,NULL)
+INSERT INTO Cliente VALUES('Gustavo dos Santos','11921946671','guxta_cli@hotmail.com','guxta_123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Guilherme Rosendo','115254985','guilherme_cli@gmail.com','gui_123','08/03/2004',NULL)
+INSERT INTO Cliente VALUES('Guilherme Rosendo','11921946472','guilherme_cli@gmail.com','gui_123','08/03/2004',NULL)
 GO
-INSERT INTO Cliente VALUES('Gabriel Felisdoro','115254942','gabriel@hotmail.com','gab123',NULL,NULL)
+INSERT INTO Cliente VALUES('Gabriel Felisdoro','11921946573','gabriel@hotmail.com','gab123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Pedro Almeida','115254961','pedrao123@gmail.com','pdr123',NULL,NULL)
+INSERT INTO Cliente VALUES('Pedro Almeida','11921946676','pedrao123@gmail.com','pdr123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Vinicius Moises','115254984','vinimoises@hotmail.com','vini321','25/06/2001',NULL)
+INSERT INTO Cliente VALUES('Vinicius Moises','11921946674','vinimoises@hotmail.com','vini321','25/06/2001',NULL)
 GO
-INSERT INTO Cliente VALUES('Rafael Pinto','115254965','rafaelpinto@gmail.com','rpinto123','24/07/1988',NULL)
+INSERT INTO Cliente VALUES('Rafael Pinto','11921946680','rafaelpinto@gmail.com','rpinto123','24/07/1988',NULL)
 GO
-INSERT INTO Cliente VALUES('Cristiano Ronaldo','115454985','cr7@hotmail.com','ccr7rei',NULL,NULL)
+INSERT INTO Cliente VALUES('Cristiano Ronaldo','11921945027','cr7@hotmail.com','ccr7rei',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Marcio Silva','115654557','marciosilva@gmail.com','marcio321','30/04/1999',NULL)
+INSERT INTO Cliente VALUES('Marcio Silva','11921945029','marciosilva@gmail.com','marcio321','30/04/1999',NULL)
 GO
-INSERT INTO Cliente VALUES('Ordinael Zurc','143254984','ordinaelzurc@hotmail.com','ordi123',NULL,NULL)
+INSERT INTO Cliente VALUES('Ordinael Zurc','11921945030','ordinaelzurc@hotmail.com','ordi123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Marcos Santos','119843566','marcossantos@hotmail.com','marcao123','14/03/2003',NULL)
+INSERT INTO Cliente VALUES('Marcos Santos','11921945033','marcossantos@hotmail.com','marcao123','14/03/2003',NULL)
 GO
-INSERT INTO Cliente VALUES('Fernando Jose','114546465','fjose@hotmail.com','fernando123',NULL,NULL)
+INSERT INTO Cliente VALUES('Fernando Jose','11921945036','fjose@hotmail.com','fernando123',NULL,NULL)
 GO
-INSERT INTO Cliente VALUES('Malaquias Junior','119843234','malaquiasjunior@gmail.com','malaquias123','17/09/1978',NULL)
+INSERT INTO Cliente VALUES('Malaquias Junior','11921945037','malaquiasjunior@gmail.com','malaquias123','17/09/1978',NULL)
 GO
-INSERT INTO Cliente VALUES('Bruno Costa','119843437','bruninho@hotmail.com','bruno123','12/01/2000',NULL)
+INSERT INTO Cliente VALUES('Bruno Costa','11921945038','bruninho@hotmail.com','bruno123','12/01/2000',NULL)
 GO
-INSERT INTO Cliente VALUES('Jose Alves','1198435435','josealves@gmail.com','jose123',NULL,NULL)
+INSERT INTO Cliente VALUES('Jose Alves','11921945039','josealves@gmail.com','jose123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Lucas Nogueira','11933315811','lucasnog@gmail.com','lucaslindo',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Kaiky Silva','11984354358','kaikaosilva@gmail.com','kaikysilva123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Guilherme Bruno','11984354359','gbrunao@gmail.com','guilhermebruno66',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Gustavo Souza','11933315812','gustavaosouza@gmail.com','gustavos',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Andre Costa','11933315813','andrecosta@gmail.com','andrecosta88',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Ademar Silva','11937315815','ademarsilva@hotmail.com','ademarsilva55',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Yuri Santos','11937315817','yurisantos@gmail.com','yurisantos53',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Hugo Gabriel','11937315816','hugogabriel@gmail.com','157hugo',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Julio Almeida','11937315417','julioalmeida@hotmail.com','julioalmeida',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Leandro Geraldo','11937315418','leandrogeraldo@gmail.com','leandrog684',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Ismael Gonzaga','11937315419','ismaelgonzaga@gmail.com','ismael157',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Richard Farias','11937315420','richardfarias@hotmail.com','richardquim',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Emidio Pires','11937315421','emidiopires@hotmail.com','emidiozera100',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Carlos Rocha','11937315422','carlosrocba@gmail.com','carlosr23',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Cristiano Santos','11937315423','cristiano7santos@hotmail.com','cristianos66',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Kauan Jesus','11937315424','kjesus@gmail.com','kaunzada67854',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Alan Jesus','11937315425','alanjesusempreendedor@gmail.com','alanj123',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Iran Jose','11937315426','iranluva@gmail.com','iranreceba',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Fabiano Chaves','11937315427','fchaves@gmail.com','fchaves53',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Jailson Mendes','11937315428','jailsonmendes@hotmail.com','jailsonmendes200',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Astolfo Miguel','11937315429','astolfom@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Miguel Mendes','11924030785','mmendes@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Arthur Costa','11924030770','arthurcosta@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Bruno Silva','11924030786','brunosilva@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Breno Lopes','11924030787','brenolopes19@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Jhonata Rocha','11924030788','jhonatar@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Jhon Santos','11924030089','jhonjhon@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Vinicius Almeida','11924050478','vinialmeida@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Gustavo Brito','11924050471','gbrito@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Paulo Plinio','11924050472','pauloplinio150@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Gerson Mendes','11924050473','gersonmendes@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Osvaldo Veiga','11924050474','oveiga20@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Rafael Henrique ','11924050475','rafaelmarques@gmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Pedro Henrique','11924050499','pedrohenrique66@hotmail.com','astolfeira',NULL,NULL)
+GO
+INSERT INTO Cliente VALUES('Vitor Guedes','11924050490','vitorguedes50@gmail.com','astolfeira',NULL,NULL)
 GO
 
 
@@ -205,45 +276,113 @@ GO
 INSERT INTO Forma_Pagamento VALUES('PIX')
 GO
 
-INSERT INTO Contato_Barbeiro VALUES('11-21326196', 'TELEFONE', '1')
+INSERT INTO Contato_Barbeiro VALUES('11927523144', 'TELEFONE', '1')
 GO
-INSERT INTO Contato_Barbeiro VALUES('15-2036784', 'TELEFONE', '2')
-GO
-
-
-
-INSERT INTO Contato_Cliente VALUES('11-812345677', 'TELEFONE', '10')
-GO
-INSERT INTO Contato_Cliente VALUES('15-27549856', 'TELEFONE', '11')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5254985', 'TELEFONE', '12')
+INSERT INTO Contato_Barbeiro VALUES('11921784596', 'TELEFONE', '2')
 GO
 
-INSERT INTO Contato_Cliente VALUES('11-5254985', 'TELEFONE', '13')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5254942', 'TELEFONE', '14')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5254961', 'TELEFONE', '15')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5254984', 'TELEFONE', '16')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5254965', 'TELEFONE', '17')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5454985', 'TELEFONE', '18')
-GO
-INSERT INTO Contato_Cliente VALUES('11-5654557', 'TELEFONE', '19')
-GO
-INSERT INTO Contato_Cliente VALUES('14-3254984', 'TELEFONE', '20')
-GO
-INSERT INTO Contato_Cliente VALUES('11-9843566', 'TELEFONE', '21')
-GO
-INSERT INTO Contato_Cliente VALUES('11-4546465', 'TELEFONE', '22')
-GO
-INSERT INTO Contato_Cliente VALUES('11-9843234', 'TELEFONE', '23')
-GO
-INSERT INTO Contato_Cliente VALUES('11-9843437', 'TELEFONE', '24')
-GO
 
+
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '10')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '11')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '12')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '13')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '14')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '15')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '16')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '17')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '18')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '19')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '20')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '21')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '22')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '23')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '24')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '25')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '26')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '27')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '28')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '29')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '30')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '31')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '32')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '33')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '34')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '35')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '36')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '37')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '38')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '39')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '40')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '41')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '42')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '43')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '44')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '45')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '46')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '47')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '48')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '49')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '50')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '51')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '52')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '53')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '54')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '55')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '56')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '57')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '58')
+GO
+INSERT INTO Contato_Cliente VALUES('', 'TELEFONE', '59')
+GO
 
 
 INSERT INTO Agendamento VALUES (10, 1, GETDATE(), '10:45', 0, '00:30:00', 1)
