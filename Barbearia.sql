@@ -13,144 +13,144 @@ GO
 CREATE TABLE Barbeiro
 (
 	 -- IDENTITY: campo auto numérico
-	ID INT IDENTITY,
-	NOME        VARCHAR(100) NOT NULL,
-	TELEFONE	VARCHAR(11)NOT NULL,
-	EMAIL	    VARCHAR(100)NULL,
-	SENHA		VARCHAR(50)NOT NULL,
-	dataNasc    date NULL,
-	nivelAcesso VARCHAR(10)NOT NULL,
-	FOTO		VARBINARY(max) NULL,
+	id INT IDENTITY,
+	nome        VARCHAR(100) NOT NULL,
+	telefone	VARCHAR(11)NOT NULL,
+	email	    VARCHAR(100)NULL,
+	sena		VARCHAR(50)NOT NULL,
+	datanasc    date NULL,
+	nivelacesso VARCHAR(10)NOT NULL,
+	foto		VARBINARY(max) NULL,
 
 	-- PRIMARY KEY: chave primária
-	PRIMARY KEY(ID)
+	PRIMARY KEY(id)
 )
 GO
 
 CREATE TABLE Cliente
 (
-	ID INT IDENTITY (10, 1),
-	NOME        VARCHAR(100) NOT NULL,
-	TELEFONE	VARCHAR(11)NOT NULL,
-	EMAIL	    VARCHAR(100)NULL,
-	SENHA		VARCHAR(50)NOT NULL,
-	dataNasc    date NULL,
-	FOTO		VARBINARY(max) NULL,
+	id INT IDENTITY (10, 1),
+	nome        VARCHAR(100) NOT NULL,
+	telefone	VARCHAR(11)NOT NULL,
+	email	    VARCHAR(100)NULL,
+	senha		VARCHAR(50)NOT NULL,
+	datanasc    date NULL,
+	foto		VARBINARY(max) NULL,
 
-	PRIMARY KEY(ID)
+	PRIMARY KEY(id)
 )
 GO
 
  CREATE TABLE Servico
 (
     -- IDENTITY: campo auto numérico
-	ID           INT IDENTITY,
-	NOME_SERVICO VARCHAR(50) NOT NULL,
-	DESCRICAO    VARCHAR(50) NULL,
-	TEMPO        VARCHAR(30) NOT NULL,
-	PRECO        DECIMAL(8,2) NOT NULL,
-	STATUS       BIT NOT NULL,
+	id           INT IDENTITY,
+	nome_servico VARCHAR(50) NOT NULL,
+	descricao    VARCHAR(50) NULL,
+	tempo        VARCHAR(30) NOT NULL,
+	preco        DECIMAL(8,2) NOT NULL,
+	status       BIT NOT NULL,
 	
 	-- PRIMARY KEY: chave primária
-	PRIMARY KEY (ID)
+	PRIMARY KEY (id)
 )
 GO
 
 CREATE TABLE Disponibilidade_Barbeiro
 (
-  ID		  INT IDENTITY,
-  OBSERVACAO  VARCHAR(100) NOT NULL,
-  TEMPO_FORA    TIME,
-  BARBEIRO_ID   INT,
+  id		  INT IDENTITY,
+  observacao  VARCHAR(100) NOT NULL,
+  tempo_fora    TIME,
+  barbeiro_id   INT,
   
-  PRIMARY KEY(ID),
-  FOREIGN KEY(BARBEIRO_ID) REFERENCES Barbeiro(id) 
+  PRIMARY KEY(id),
+  FOREIGN KEY(barbeiro_id) REFERENCES Barbeiro(id) 
 
 
 )
 
 CREATE TABLE Contato_Cliente
 (
- ID           INT IDENTITY,
- CONTATO      VARCHAR (50) NOT NULL,
- TIPO_CONTATO VARCHAR (50) NOT NULL,
- CLIENTE_ID   INT NOT NULL,
+ id           INT IDENTITY,
+ contato      VARCHAR (50) NOT NULL,
+ tipo_contato VARCHAR (50) NOT NULL,
+ cliente_id   INT NOT NULL,
 
-   PRIMARY KEY (ID),
-   FOREIGN KEY (CLIENTE_ID) REFERENCES Cliente(ID)
+   PRIMARY KEY (id),
+   FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
    
 )
 GO
 
 CREATE TABLE Contato_Barbeiro
 (
- ID          INT IDENTITY,
- CONTATO     VARCHAR (50) NOT NULL,
- TIPO_CONTADO VARCHAR (50) NOT NULL,
- BARBEIRO_ID INT NOT NULL,
+ id          INT IDENTITY,
+ contato     VARCHAR (50) NOT NULL,
+ tipo_contato VARCHAR (50) NOT NULL,
+ barbeiro_id INT NOT NULL,
 
-   PRIMARY KEY (ID),
-   FOREIGN KEY (BARBEIRO_ID) REFERENCES Barbeiro(ID)
+   PRIMARY KEY (id),
+   FOREIGN KEY (barbeiro_id) REFERENCES Barbeiro(id)
    
 )
 GO
 
 CREATE TABLE Agendamento
 (
-     ID			    	INT IDENTITY,
-	 CLIENTE_ID	     	INT NOT NULL,
-	 BARBEIRO_ID    	INT NOT NULL,
-	 DATA_AGENDAMENTO	DATE NOT NULL,
-	 HORA_AGENDAMENTO	TIME (0) NOT NULL,
-	 STATUS			    INT NOT NULL,
-	 TEMPO_SERVICO    TIME (0) NOT NULL,
-	 SERVICO_ID		    INT NOT NULL,
+     id			    	INT IDENTITY,
+	 cliente_id	     	INT NOT NULL,
+	 barbeiro_id    	INT NOT NULL,
+	 data_agendamento	DATE NOT NULL,
+	 hora_agendamento	TIME (0) NOT NULL,
+	 status			    INT NOT NULL,
+	 tempo_servico    TIME (0) NOT NULL,
+	 servico_id		    INT NOT NULL,
 	 
 	 
-	 PRIMARY KEY (ID),
-	 FOREIGN KEY (SERVICO_ID) REFERENCES Servico(ID),
-	 FOREIGN KEY (CLIENTE_ID) REFERENCES Cliente(ID),
-	 FOREIGN KEY (BARBEIRO_ID) REFERENCES Barbeiro(ID)
+	 PRIMARY KEY (id),
+	 FOREIGN KEY (servico_id) REFERENCES Servico(id),
+	 FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
+	 FOREIGN KEY (barbeiro_id) REFERENCES Barbeiro(id)
 )
 GO
 
 
 CREATE TABLE Forma_Pagamento
 (
-	ID INT IDENTITY,
-	FORMA_PAGAMENTO VARCHAR(50) NOT NULL,
+	id INT IDENTITY,
+	forma_pagamento VARCHAR(50) NOT NULL,
 
-	PRIMARY KEY (ID)
+	PRIMARY KEY (id)
 
 )
 GO
 
 CREATE TABLE Pagamento_Barbearia
 (
-  ID				 INT IDENTITY,
-  FORMA_PAGAMENTO_ID INT not null,
-  SERVICO_ID		 INT not null,
-  CLIENTE_ID         INT NOT NULL,
-  VALOR_PAGO		 DECIMAL (8,2) null,
+  id				 INT IDENTITY,
+  forma_pagamento_id INT not null,
+  servico_id		 INT not null,
+  cliente_id         INT NOT NULL,
+  valor_pago		 DECIMAL (8,2) null,
 
-  PRIMARY KEY (ID),
-  foreign key (FORMA_PAGAMENTO_ID) references Forma_Pagamento(ID),
-  foreign key (SERVICO_ID) references Servico(ID),
-  FOREIGN KEY (CLIENTE_ID) REFERENCES CLIENTE(ID)
+  PRIMARY KEY (id),
+  foreign key (forma_pagamento_id) references Forma_Pagamento(id),
+  foreign key (servico_id) references Servico(id),
+  FOREIGN KEY (cliente_id) REFERENCES CLIENTE(id)
 
 )
 GO
 
 CREATE TABLE Checkin
 (
-	ID INT IDENTITY,
-	DATA DATE NOT NULL,
-	HORA TIME NOT NULL,
-	PRESENCA INT NOT NULL,
-	AGENDAMENTO_ID INT NOT NULL,
+	id INT IDENTITY,
+	data DATE NOT NULL,
+	hora TIME NOT NULL,
+	presenca INT NOT NULL,
+	agendamento_id INT NOT NULL,
 
-	PRIMARY KEY(ID),
-	FOREIGN KEY (AGENDAMENTO_ID) REFERENCES Agendamento(ID) 
+	PRIMARY KEY(id),
+	FOREIGN KEY (agendamento_id) REFERENCES Agendamento(id) 
 )
 GO
 
